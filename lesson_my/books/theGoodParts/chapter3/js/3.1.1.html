@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var empty_object ={ };
+        
+        var stooge = {
+            "first-name": "Jerome",
+            "last-name" : "Howard"
+        };
+
+        var flight = {
+            airline: "Oceanic",
+            number: "815",
+            departure: {
+                IATA: "SYD",
+                time: "2004-09",
+                city: "Sydney"
+            },
+            arriyal: {
+                IATA: "LAX",
+                time: "2004-09",
+                city: "Los Angeles"
+            }
+        };
+
+        var middle = stooge["middle-name"] || "(none)";
+        var status = flight.status || "unknown"
+        stooge['middle-name'] = 'Lester';
+        stooge.nackname = 'Curly';
+        flight.equipment = {
+            model: 'Boeing 777'
+        };
+        flight.status = 'overdue';
+    </script>
+</body>
+</html>
