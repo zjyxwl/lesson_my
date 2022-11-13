@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <text>汽车详情页</text>
+</view>
