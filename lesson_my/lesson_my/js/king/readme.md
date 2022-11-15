@@ -12,7 +12,7 @@
     let 声明变量 
     const 声明常量 必须赋初值
 
-    -const arr = [1,2,3]
+    - const arr = [1,2,3]
         - 在头部和尾部
         - unshift + shift
         - push pop

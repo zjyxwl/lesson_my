@@ -1,0 +1,30 @@
+/* 复用的样式组件 */
+.weui-btn{
+    position: relative; /*内部元素定位*/
+    display: block; /*行内块级元素*/
+    width: 184px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    color: aliceblue;
+    line-height: 1.88235294;
+    border-radius: 8px;
+}
+
+.weui-btn_primary{
+    background-color: rgba(36, 206, 20, 0.919);
+}
+.weui-btn_primary:active{
+    background: green;
+}
+
+.weui-btn_warn{
+    background-color: rgb(234, 21, 21);
+    color: aliceblue;
+}
+.weui-btn + .weui-btn {  /*'+' 兄弟选择器*/
+    margin-top: 10px;
+}
