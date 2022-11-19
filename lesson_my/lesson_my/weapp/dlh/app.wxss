@@ -1,0 +1,13 @@
+/**app.wxss**/
+/* 统一设置每一个页面 */
+@import "style/reset.wxss";
+@import "style/hero.wxss";
+@import "style/button.wxss";
+@import "style/action.wxss";
+
+page {
+  background: #f8f8f8;
+}
+.section {
+  height: 100vh;
+}
