@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 为什么var 挂载到window  let 不会
+        // 代码本质  文本字符串
+        // js 编译器 chrom V8引擎
+        // 分词 var name  =  字符串数据类型
+        // 编译阶段 语法校验 console.log(name); name let声明时 进入暂时性死区  // undefined 变量提升
+        // 运行阶段
+        // 内存中声明
+        // 不同变量 作用域
+        // VO {global: ,name}
+        // 变量查找
+        // var name = "windowsName";    // window global scope
+        // var y = 8;
+        // function a() {
+        //     // 作用域链
+        //     // VO {function: ,name, x, chain: global scope}
+        //     var name = "Cherry";      //  function scope
+        //     var x = 2;
+        //     console.log(name);
+        //     console.log(x,y);
+        // }
+        // a();  // 一段代码 内存中 进入到执行栈
+        // "use strict"
+        var name = "windowName";
+        var a = {
+            name:'Charry',
+            fn: function () {
+                console.log(this.name)
+            }
+        }
+        // function a() {
+        //     var name = "Charry";
+        //     // 无法确定 this值由调用的方式决定
+        //     console.log(this.name);
+        // }
+        // a.fn();  // 函数一定会变量提升 window  window.a()
+        // window.a.fn()
+        var b = 4;
+        var c = b; // 扶着墙值传递
+        var f = a.fn;  //赋值 函数对象 f 指向 引用式赋值
+        f();
+    </script>
+</body>
+</html>
