@@ -1,56 +1,80 @@
 // pages/home/home.js
 // 模块化
 import {
-  getMultiData
-} from '../../services/home.js'
+  getMultiData,
+  getProducts
+} from '../../service/home.js'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    binners:[
-      'https://img.36krcdn.com/20221207/v2_97754071f51143ccbf747724fd85bf55_img_jpeg',
-      'https://img.36krcdn.com/20221207/v2_4af01f7ef9814ca8889af47fddbf77f4_img_jpg',
-      'https://img.36krcdn.com/20221208/v2_b26c308fda4742e098c6071635b886b4_img_jpeg'
+    banners: [
     ],
-    showTabControl: true,
+    showTabControl: false,
     titles: ["流行", "新款", "精选"],
-    topPosition: 0
+    topPosition: 0,
+    page: 1,
+    recommends: []
   },
   tabClick(e) {
-
+    console.log(e);
   },
   loadMore() {
-
+    console.log('到底了');
   },
-  scrollPosition() {
-
+  scrollPosition(e) {
+    // console.log(e);
+    const position = e.detail.scrollTop;
+if (position > 600) {
+      this.setData({
+        showTabControl: true
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // 
+    // 请求数据的封装
     this._getData();
   },
   _getData() {
     this._getMultiData();
+    this._getGoods();
+  },
+  _getGoods() {
+    getProducts('new', 1)
+      .then(res => {
+        console.log(res)
+      })
   },
   _getMultiData() {
-    // 耗时的http请求
-    getMultiData()
-    // 拿到数据后
+    // 耗时的http 请求任务
+    getMultiData() // promise 拿到接口返回的数据
+      // 拿到数据之后
       .then(res => {
+        console.log(res)
+        // const banners = [];
+        // res.data.banner.list.forEach(item => {
+        //   banners.push(item.image)
+        // })
+        // console.log(banners);
+        // map 可以由一个数组得到一个新的数组 
         const banners = res.data.banner.list.map(item => {
+          // 每一次都执行
+          // 返回值会组成新的数组
           return item.image
         })
         this.setData({
           banners: banners,
+          recommends: res.data.recommend.list
         });
       })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

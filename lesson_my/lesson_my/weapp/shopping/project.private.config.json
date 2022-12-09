@@ -4,5 +4,18 @@
   "setting": {
     "compileHotReLoad": true,
     "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

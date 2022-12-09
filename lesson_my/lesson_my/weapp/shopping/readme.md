@@ -47,3 +47,25 @@
     取数据的  getData fetchData
   3. 高手还会把 数据请求 模块化独立于Page
     
+- 列表数据渲染
+  1. scroll-view
+
+    bindscralltolower= "loadMore" 底部加载更多
+    concat  分页  ?page=1
+    切换tab ?type=
+
+- 小程序的架构
+  - components 组件
+    细化界面开发， 复用
+  - service 跟api 接口相关
+    直接wx.require 缺点？ 不易管理
+    统一管理
+
+- 接口接入
+
+
+- 页面开发 新思路
+  页面不在由标签构成 有组件构成
+  把一个页面任务 分成若干组件开发任务
+    - 共享 多个页面 /commponents
+    - 不共享 只在特定页面上显示
