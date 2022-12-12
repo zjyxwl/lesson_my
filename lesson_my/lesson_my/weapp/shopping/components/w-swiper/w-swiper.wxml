@@ -1,3 +1,4 @@
+<!-- dot 颜色可以配置 -->
 <swiper indicator-dots='true' 
         indicator-active-color='#ff5777'
         autoplay='true'

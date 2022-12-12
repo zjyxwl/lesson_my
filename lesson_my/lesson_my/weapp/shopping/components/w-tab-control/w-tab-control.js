@@ -3,12 +3,12 @@ Component({
   /**
    * 组件的属性列表
    */
-  // 接受外界传值的属性
+  // 接收外界传值的属性
   properties: {
     titles: {
-      // 一定要给个数组 校验
+      // 一定要给我个数组 校验
       type: Array,
-      // 默认值 空的
+      // 默认值 
       value: []
     }
   },
@@ -25,6 +25,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    setCurrentIndex(index) {
+      this.setData({
+        currentIndex:index
+      })
+    },
     itemClick(e) {
       // console.log('--------------')
       this.setData({
@@ -33,7 +38,7 @@ Component({
 
       // 2.发出时间
       const data = {index: this.data.currentIndex}
-      // 向外报告
+      // 向外报告 triggerEvent  bind:tabclick
       this.triggerEvent("tabclick", data, {})
     }
   }

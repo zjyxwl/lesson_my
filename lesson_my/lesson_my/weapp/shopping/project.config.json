@@ -37,11 +37,12 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
-  "appid": "wxf5531741bdfeed9d",
+  "appid": "wx20f6d81649ebdd86",
   "projectname": "miniprogram-92",
   "condition": {},
   "editorSetting": {
