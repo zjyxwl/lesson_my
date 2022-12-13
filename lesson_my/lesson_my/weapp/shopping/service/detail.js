@@ -8,3 +8,9 @@ export const getDetail = (iid) => {
     }
   })
 } 
+
+export const getRecommends = () => {
+  return request({
+    url: '/recommend'
+  })
+}
