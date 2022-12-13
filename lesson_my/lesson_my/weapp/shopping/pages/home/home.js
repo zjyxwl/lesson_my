@@ -144,7 +144,7 @@ Page({
     getMultiData() // promise 拿到接口返回的数据
       // 拿到数据之后
       .then(res => {
-        console.log(res)
+        console.log(JSON.stringify(res))
         // const banners = [];
         // res.data.banner.list.forEach(item => {
         //   banners.push(item.image)
