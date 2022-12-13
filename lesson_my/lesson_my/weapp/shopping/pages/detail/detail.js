@@ -42,6 +42,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    console.log('onload from detail');
     // 1. 解构参数
     const iid = options.iid;
     this.setData({
@@ -112,7 +113,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-
+    console.log('unload, detail');
   },
 
   /**

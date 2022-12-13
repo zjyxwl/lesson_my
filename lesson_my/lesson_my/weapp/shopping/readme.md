@@ -202,3 +202,26 @@
 
 - 加入购物车的商品， 如何到购物车页面也可以显示出来呢？
   app.js globalData 
+
+- 购物车页面开发规则
+  1. 数据来自 app.globalData
+  2. 生命周期的概念
+    - app.js  onLaunch
+    - home.js  onLoad onShow.... onunload 
+    - cart.js   tabbar  不会销毁
+      onload  只会执行一次 
+      onshow 会执行多次 更新购物车数据
+
+- 数组的es6方法
+  1. for(let i = 0; i < arr.length;i++) {
+    计数循环， 对cpu友好， 但是对人不OK, 可读性不好
+  }
+    如果下标很重要的化
+  2. for es6 升级版
+    for (let item of arr) {
+
+    }
+  3. 数组好多功能方法
+    forEach 让每个元素都执行一个回调函数 
+    find  任然会像forEach 一样， 回调函数 return true , 返回当前项
+    reduce  累加计算 
