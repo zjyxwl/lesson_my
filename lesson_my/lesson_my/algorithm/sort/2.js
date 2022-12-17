@@ -4,4 +4,5 @@ const arr = [1, 2, 6, 3, 9, 5];
 arr.sort((a, b) => {
     return b - a
 })
+
 console.log(arr);
