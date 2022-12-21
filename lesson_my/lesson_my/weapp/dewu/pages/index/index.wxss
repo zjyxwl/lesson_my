@@ -18,3 +18,16 @@
 .goods-express .van-col {
   text-align: left;
 }
+
+.goods-cell-group {
+  margin-top: 20rpx;
+}
+.goods-cell-group .val-cel__value {
+  color: #999999;
+}
+.goods-tag {
+  margin-left: 10rpx;
+}
+.goods-action {
+  position: relative!important;
+}

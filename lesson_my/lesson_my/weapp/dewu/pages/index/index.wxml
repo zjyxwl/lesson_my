@@ -44,9 +44,9 @@
     >
     </van-goods-action-icon>
     <van-goods-action-icon
-    icon="chat-o"
+      icon="cart-o"
       text="购物车"
-      bind:click="onClickUser"
+      bind:click="onClickCart"
     >
     </van-goods-action-icon>
     <van-goods-action-button
