@@ -14,20 +14,26 @@
 class Promise {
     constructor(executor) {
         // 
-        executor(); // 立即执行 
+        this.status = 'pending';
+        let resolve = value => { // 传的值
+            this.status = 'fulfilled'
+        } 
+        executor(resolve); // 立即执行 
     }
     then(cb) {
-
+       if (this.status == 'fulfilled') {
+        cb()
+       }
     }
 }
-let p = new Promise((resolve, reject) => {
+let p = new Promise((resolve) => {
     setTimeout(() => {
-        // resolve()
+        resolve()
     }, 3000)
     
 })
     p
-        .then(() => {
+        .then((data) => {
             console.log('-----------')
         })
 </script>  
