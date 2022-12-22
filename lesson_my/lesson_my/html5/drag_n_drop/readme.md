@@ -43,3 +43,7 @@
 
     IE盒模型的盒子大小计算方式（设置的width, height) = 内容wh（
     width-padding-border） + padding + border
+
+- drag效果
+    1. 拖拽的元素， 添加draggable="true"  鼠标手型
+        dragStart dragEnd 添加一些被拖拽的效果

@@ -8,7 +8,7 @@
     <!-- DOM树 + CSS OM = 渲染树 render tree -->
     <link rel="stylesheet" href="./common.css">
     <!-- 下载， 运行时候阻塞 -->
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="empty">
@@ -18,15 +18,5 @@
     <div class="empty"></div>
     <div class="empty"></div>
     <div class="empty"></div>
-    <!-- DOM 阻塞 -->
-    <script>
-    // 生命周期函数
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOMContentLoaded')
-    });
-    window.onload = function() {
-        console.log('onload');
-    }
-    </script>
 </body>
 </html>
