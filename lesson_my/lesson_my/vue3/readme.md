@@ -46,4 +46,13 @@
     - v-bind:value 绑定值   :value   单向数据绑定
         v-on:input 绑定事件    v-on  简写为 @
     - 单向数据?
-        v-bind:value  +  v-on:input
+        v-bind:value  +  v-on:input 复杂 出现在 表单元素
+    - 双向数据绑定
+        v-model  =  v-bind:value + v-on:input
+        api 更友好
+
+- 生命周期  MVVM
+    Model View
+    - create 创建阶段, 在内存中
+        创建之前会先监听事件和生命周期钩子函数 beforeCreate
+        数据的绑定和响应式 get set defineProperty

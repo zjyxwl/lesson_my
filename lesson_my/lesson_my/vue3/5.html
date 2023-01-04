@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                // 定义数据   model数据
+                return {
+                    msg: 'gongxi',
+                    counter: 1
+                }
+            },
+            create() {
+                console.log('创建')
+            },
+            create() {
+                console.log('创建')
+            },
+            // 挂载上去
+            // 生命周期钩子函数, 自动执行
+            beforeMount() {
+                console.log('挂载之前')
+            },
+            mounted() {
+                console.log('挂载')
+            },
+            methods: {
+                doStart() {
+                    this.counter++
+                }
+            },
+            template: `
+                <div>
+                    <h1>{{msg}}, 点赞 {{counter}}</h1>
+                    <button @click="doStart">点赞+1</button>    
+                </div>
+            `
+            // vm 自动关联
+        })
+        app.mount('#app')
+    </script>
+</body>
+</html>
