@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <input type="text" v-model="title">
+        <ul>
+            <li v-for="(todo, index) in todos" :key="index" @keydown="addTOdo">{{index}}{{todo}}</li>
+        </ul>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    title: 'vue',
+                    todos: [
+                        "脱单",
+                        "名企"
+                    ]
+                }
+            }
+        })
+        app.mount('#app');
+    </script>
+</body>
+</html>
