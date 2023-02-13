@@ -11,6 +11,11 @@
     <div id="app"></div>
     <script>
     const app = Vue.createApp({
+        data() {
+            return {
+                todo: '',
+            }
+        },
         template: `
             <input type="text" />
         `

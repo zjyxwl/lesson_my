@@ -10,13 +10,18 @@
 <body>
     <div id="app">
         <h2>{{title}}</h2>
-        <input type="text" v-model="title">
+        <input type="text" v-model="title" @keydown="addTOdo">
         <ul>
-            <li v-for="(todo, index) in todos" :key="index" @keydown="addTOdo">{{index}}{{todo}}</li>
+            <li v-for="(todo, index) in todos" :key="index" >{{index}}{{todo}}</li>
         </ul>
     </div>
     <script>
         const app = Vue.createApp({
+            methods: {
+                addTodo() {
+
+                }
+            },
             data() {
                 return {
                     title: 'vue',
