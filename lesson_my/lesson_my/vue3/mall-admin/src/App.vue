@@ -1,4 +1,10 @@
 <script setup>
+import { reactive } from 'vue'
+
+const state = reactive({
+  defaultOpen: ['1','2'],
+  currentPath: '/add'
+})
 </script>
 
 <template>
@@ -20,6 +26,8 @@
           background-color="#222832"
           text-color="#fff"
           :router="true"
+          :default-openeds="state.defaultOpen"
+          :default-active="state.currentPath"
         >
           <el-sub-menu index="1">
             <template #title>
