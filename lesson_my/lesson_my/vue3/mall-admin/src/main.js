@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import App from './App.vue'  // 根组件
-// - 启动路由 路由接管项目
-import router from '@/router'  // 路由的配置  模块化
+import App from './App.vue' // 根组件
+// - 启用路由  路由接管项目
+import router from '@/router' //路由的配置 模块化
 // - 组件库 按需加载
 import {
     ElContainer,
@@ -14,16 +14,21 @@ import {
     ElFormItem,
     ElInput,
     ElButton,
-    ElCheckbox
+    ElCheckbox,
+
 } from 'element-plus'
 import 'element-plus/dist/index.css'
-// - css reset ....
-// - 全局要做的， 在这里
+import { createPinia } from 'pinia' // 
 
-const app = createApp(App)  // web app
+// - css reset .... 
+// - 全局要做的， 在这做 
+
+
+const app = createApp(App) // web app 
 
 app
-    .use(router)
+    .use(router) // 前端路由
+    .use(createPinia()) // 中央数据管理
     // 全局组件
     .use(ElContainer)
     .use(ElAside)
@@ -36,4 +41,4 @@ app
     .use(ElInput)
     .use(ElButton)
     .use(ElCheckbox)
-    .mount('#app') // 挂载
+    .mount('#app') //挂载
