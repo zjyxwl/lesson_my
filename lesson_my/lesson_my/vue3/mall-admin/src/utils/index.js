@@ -8,5 +8,5 @@ export const getPageTitle = (pathName) => {
 }
 
 export const getLocal = (name) => {
-    return JSON.parse(localStorage.getItem(name)) || ''
+    return localStorage.getItem(name)
 }
