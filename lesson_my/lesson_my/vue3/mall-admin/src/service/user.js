@@ -1,9 +1,9 @@
 import axios from './config.js'
 
-export const login =  (params) => {
+export const login = (params) => {
     return axios.post('/adminUser/login', params)
 }
 
 export const getUserProfile = () => {
-    return axios.post('adminUser/profil')
+    return axios.get('/adminUser/profile')
 }

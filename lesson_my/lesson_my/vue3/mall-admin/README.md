@@ -111,6 +111,18 @@
             读这个状态  userStore.profile
             写这个状态  userStore.profile = {......} NO
                 setProfile().....
-    3. 
+
+
+- el-card 组件
+    1. 当DOM树 运行运行到组件的时候
+        一堆html + css + js 组合
+        停下来 解析el-card 组件
+        进入组件的内部
+    2. header props 直接使用
+    3. el-card 为了更好的应用
+        定制
+        slot 插槽区域
+        允许在组件中间 放置到slot 区域
+        可能有很多个， template + #haeder
         
 

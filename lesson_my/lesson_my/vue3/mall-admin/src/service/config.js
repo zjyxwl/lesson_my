@@ -6,6 +6,11 @@ axios.defaults.baseURL =
 axios.defaults.headers['token'] = getLocal('token') || ''
 
 axios.interceptors.response.use(res => {
+    // code,
+    // message
+    // data: {
+    //     data:
+    // }
     return res.data
 })
 
