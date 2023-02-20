@@ -18,15 +18,24 @@ import {
     ElCard,
     ElPopconfirm,
     ElTable,
-    ElTableColumn
+    ElTableColumn,
+    ElPagination,
+    ElDialog,
+    ElUpload,
+    ElIcon
 } from 'element-plus'
 import 'element-plus/dist/index.css'
 import { createPinia } from 'pinia'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 // - 样式重置 css reset...
 // 全局要做的，在这做
 
 const app = createApp(App) // Web app
+
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component)
+}
 
 app
    .use(router) //前端路由
@@ -47,4 +56,8 @@ app
    .use(ElPopconfirm)
    .use(ElTable)
    .use(ElTableColumn)
+   .use(ElPagination)
+   .use(ElDialog)
+   .use(ElUpload)
+   .use(ElIcon)
    .mount('#app') // 挂载

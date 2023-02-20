@@ -124,5 +124,12 @@
         slot 插槽区域
         允许在组件中间 放置到slot 区域
         可能有很多个， template + #haeder
+
+- 后台列表页面通用开发逻辑
+    1. ElTable >  ElTableColumn
+        thead + tbody 概念
+        row + column 概念
+        scope.row  scpoe  当前这一行
+
         
 
