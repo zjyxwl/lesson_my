@@ -13,7 +13,12 @@
     权限
     同事
 
-- 全家桶开发理解  npm i vue-router@next pinia element-plus axios stylus js-md5 lodash
+- 全家桶开发理解  
+    npm init vite
+    项目名
+    vue
+    javascript
+    npm i vue-router@next pinia element-plus axios stylus js-md5 lodash
 
 - vite 是如何启动项目的 npm run dev  运行的流程
     1. package.json script 脚本
