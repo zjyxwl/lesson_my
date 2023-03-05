@@ -5,7 +5,7 @@
               <img src="" alt="" class="logo">
               <div class="name">
                   <div class="title">新蜂商城</div>
-                  <div class="tips">Vue3.0后台管理系统</div>
+                  <div class="tips">Vue3.0后台管理系统</div>  
               </div>
           </div>
           <el-form 

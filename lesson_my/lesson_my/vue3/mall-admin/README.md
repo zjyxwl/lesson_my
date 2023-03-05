@@ -2,7 +2,7 @@
 
 - mall 移动商城
     用户用的  移动端
-    vant + asiox + 全家桶
+    vant + asiox + 全家桶   
     PDD  pv  10亿 + uv 
 
 - mall admin

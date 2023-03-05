@@ -38,7 +38,7 @@
                     type="selection"
                     width="55"
                 >
-                </el-table-column>
+                </el-table-column>  
                 <el-table-column
                     label="轮播图"
                     width="200"

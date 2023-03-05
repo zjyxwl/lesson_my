@@ -47,7 +47,7 @@ router.beforeEach((to, from, next) => {
 })
 
 onMounted(async () => {
-    // const userInfo = getLocal('profile') || '';
+    // const userInfo = getLocal('profile') || '';  
     // console.log(userInfo,'///');
     // if (!userInfo) {
     //   const { data } = await getUserProfile()
