@@ -41,3 +41,31 @@ yarn global add / npm i -g / nodemon
     - 最基本的就是 entry  output 的概念
 
     npm i -D webpack-dev-server
+
+
+- loader 的重要概念
+    - 在webpack  entry 到output  中间
+        module  匹配每个规则
+        在使用相应的loader 去处理的过程
+
+- webpack-dev-server
+    为了性能， 把代码放到内存里
+
+- hash?
+    根据文件内容进行计算 得到一个唯一值
+    为了防止浏览器的缓存 cleanWebpackPlugin 清空一下
+
+- --mode=
+    development     开发阶段
+    produntion      上线  代码压缩  http 传输 越小越好
+
+- vite 完胜 webpack
+    更快 启动快  重新编译快
+    vite 使用了GO(rust) 代替node 编译
+    webpack 生态成熟
+
+- babel 是什么
+    JS 的编译器 正因为babel， es6+  大胆使用起来
+    @babel/core  babel核心库
+    @babel/cli   minglinghang
+    @babel/preset-env   预处理方式   preset env 按照你的当前环境来编译
