@@ -8,9 +8,9 @@ import { useUserStore } from '@/store/user.js'
 const userStore = useUserStore(); // 连上了
 
 const state = reactive({
-  defaultOpen: ['1','2'],
+  defaultOpen: ['1','2', '3'],
   showMenu: true,
-  currentPath: '/',
+  currentPath: '/category',
 
 })
 
@@ -98,6 +98,17 @@ onMounted(async () => {
             <el-menu-item-group>
               <el-menu-item index="/swiper">轮播图配置</el-menu-item>
               <el-menu-item index="/hot">热销商品配置</el-menu-item>
+            </el-menu-item-group>
+          </el-sub-menu>
+          <el-sub-menu index="3">
+            <template #title>
+              <span>模块管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/category">
+                <el-icon><Menu /></el-icon>
+                分类管理
+              </el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>

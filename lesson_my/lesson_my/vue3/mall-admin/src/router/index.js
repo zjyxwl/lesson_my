@@ -33,6 +33,21 @@ const router = createRouter({
                 login: true
             },
             component: () => import('@/views/Swiper.vue')
+        },
+        {
+            path: '/category',
+            name: 'category',
+            meta: {
+                login: true
+            },
+            component: () => import('@/views/Category.vue'),
+            children: [
+                {
+                    path: '/category/level2',
+                    name: 'level2',
+                    component: () => import('@/views/Category.vue')
+                }
+            ]
         }
     ]
 })
